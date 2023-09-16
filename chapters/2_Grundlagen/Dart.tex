@@ -1,0 +1,205 @@
+\section{Dart}
+\label{sec:Grundlagen:Dart}
+
+Dart ist eine präzise Allzweck-Programmiersprache im Stil der C-Tradition, wie in Java oder JavaScript \cite{article:Dart:JavaAndDart_AfafMirghaniHassan, book:Dart:DPL_GiladBracha, book:Dart:StartGuideDart_SanjibSinha}. 
+Sie wurde im Oktober 2011 von Google veröffentlicht und ist für mehrere Google Anwendungen ausgerichtet worden, wird mittlerweile jedoch auch für weitere Programme verwendet \cite{article:Dart:JavaAndDart_AfafMirghaniHassan, book:Dart:DPL_GiladBracha}.
+Dart ist client-optimiert und wird dank dieser auch auf vielen Plattformen eingesetzt, wie z.B. dem Desktop, im mobilen Bereich, im Backend oder in Web-Anwendungen \cite{book:Dart:StartGuideDart_SanjibSinha}. 
+Durch diese Optimierung besitzt Dart gegenüber anderen Sprachen, wie beispielsweise JavaScript, verbesserte Geschwindigkeiten, eine Erzwingung der programmatischen Struktur und verbesserte Möglichkeiten für das Wiederverwenden von Software für z.B. Server oder Smartphones \cite{article:Dart:JavaAndDart_AfafMirghaniHassan}.
+So bietet Dart auch eine optionale Typisierung, wodurch die Sprache eine praktikable Option für das Entwickeln für Web-Browser, gegenüber JavaScript, ist \cite{book:Dart:DPL_GiladBracha}.
+Auch bietet sie mächtige Konzepte an wie Objekterzeugung, Parallelität, Serialisierung oder Reflexion \cite{article:Dart:JavaAndDart_AfafMirghaniHassan}.
+
+\subsection{Wieso wurde Dart entwickelt?}
+\label{subsec:Dart:Why}
+Die Entwickler in Google waren frustriert von JavaScript und dessen langsamen Entwicklungsprozess. Sie entwickelten schließlich Dart mit dem Ziel eine bessere Alternative zu JavaScript zu sein und dabei die dynamische Struktur beizubehalten, jedoch eine verbesserte Performance und erweiterbare Werkzeuge für große Projekte anzubieten \cite{article:Dart:JavaAndDart_AfafMirghaniHassan}.
+Es wurde bei der Entwicklung auch darauf geachtet, dass die Sprache auch für die moderne Programmierung entworfen wurde. Darunter fallen zum einen Browser-Anwendungen oder auch Anwendungen die im Backend-Bereich tätig sind \cite{book:Dart:DPL_GiladBracha}.
+Somit hat Dart die Absicht eine Plattform zu bieten, welche zukünftige Bedürfnisse, aufkommende Hardware und die beseitigung von Softwareproblemen unterstützen möchte \cite{article:Dart:JavaAndDart_AfafMirghaniHassan}.
+Um als solch eine Sprache zu gelten versteckt Dart seine low-level Architektur, sowie seine weiteren Macken. Jedoch bietet die Sprache auch Zugang zu mächtigen ''Facilities'', welche neue Plattformen anbieten \cite{article:Dart:JavaAndDart_AfafMirghaniHassan, book:Dart:DPL_GiladBracha}.
+
+\subsection{Syntax}
+\label{subsec:Dart:Syntax}
+Der Syntax in Dart wurde mit einer leichten Nutzbarkeit und Vertrautheit für die meisten Entwickler, sowie Skalierbarkeit im Hintergrund gestaltet und verwendet daher C-Traditionellen Syntax \cite{article:Dart:JavaAndDart_AfafMirghaniHassan, book:Dart:DPL_GiladBracha}.
+Da dieser C-Traditionelle Syntax in mehreren Sprachen vorkommt, wie z.B. Java oder JavaScript, weißt Dart hier eine Ähnlichkeit zu diesen Sprachen auf. Somit können sich Programmierer auch schneller an das Design von Dart gewöhnen, wodurch sich die Sprache zu einem guten Kandidaten für das Programmieren komplexer Systeme macht \cite{article:Dart:JavaAndDart_AfafMirghaniHassan}.
+
+\noindent
+Damit diese Vertrautheit bestärkt wird, bietet Dart ein weites Spektrum an Expressionen und Statements. So verwendet Dart beispielsweise eine Kaskadierungs-Notation mithilfe des Doppelpunkt-Operators (''..'') \cite{article:Dart:JavaAndDart_AfafMirghaniHassan, book:Dart:DPL_GiladBracha}. Mithilfe von diesem Operator lässt sich zum Einen Boilerplate-Code vermeiden und zum Anderen APIs ohne Vorplanung gestalten. So müssen Methoden im Normalfall ein Objekt zurückgeben, auf dem dann weitergearbeitet werden kann, was beim Kaskadierungsoperator jedoch unnötig ist, da dieser diese Kette unabhängig von dem zurückgegebenen Objekt erzeugen kann \cite{book:Dart:DPL_GiladBracha}.
+Auch erlaubt Dart das sogenannte ''Duck Typing'', was erlaubt, dass Datentypen für Zwecke genutzt werden können, solange diese dafür passen. So können beispielsweise Double Datentypen Integer Werte annehmen. Ein weiteres Beispiel wären String-Expressions, die mithilfe des \$-Operators gekennzeichnet werden (''\$\{...\}'') \cite{book:Dart:StartGuideDart_SanjibSinha}.
+
+\noindent
+Auch wenn Dart so gestaltet wurde, um vertraut zu wirken, so wurde darauf geachtet, dass die Programmiersprache die Kernprinzipien der Objektorientierung einhält. Diese Prinzipien beschreiben, dass nur das Verhalten eines Objektes wichtig ist, jeder Wert zur Laufzeit ein Objekt sein muss und der Code eines solchen Objektes wiederum selbst auch ein Objekt sein muss, damit auf diesem die Reflexion angewandt werden kann \cite{book:Dart:DPL_GiladBracha}.
+Auch wenn stark versucht wurde diesen Prinzipien zu folgen, so mussten Kompromisse gemacht werden, da Dart mit Fokus auf die Web-Programmierung entwickelt wurde \cite{book:Dart:DPL_GiladBracha}.
+
+\subsection{Klassen}
+\label{subsec:Dart:Klassen}
+Dart ist eine klassenbasierte pur objektorientierte Programmiersprache \\\cite{article:Dart:JavaAndDart_AfafMirghaniHassan, book:Dart:StartGuideDart_SanjibSinha, book:Dart:DPL_GiladBracha}. Sie besitzt eine optionale Typisierung, unterstützt eine sogenannte ''mixin-basierte'' Vererbung und eine ''actor-style''-Parallelität \cite{book:Dart:DPL_GiladBracha}. Am wichtigsten zu wissen ist, dass in Dart alles ein Objekt ist, so auch z.B. null-Values oder aber auch Numbers oder Booleans \cite{article:Dart:JavaAndDart_AfafMirghaniHassan, book:Dart:DPL_GiladBracha, book:Dart:StartGuideDart_SanjibSinha}. Die einzigen Ausnahmen der Objektorientierung in Dart sind ''Libraries'' und Prefixes \cite{book:Dart:DPL_GiladBracha}.
+
+    \subsubsection{Interfaces}
+    \label{subsubsec:Dart:Klassen:Interfaces}
+    Jede Klasse in Dart definiert implizit ein Interface \cite{book:Dart:DPL_GiladBracha, book:Dart:StartGuideDart_SanjibSinha}, wodurch die Regel gilt, dass alle Klassen als Interface von anderen Klassen implementiert werden können, mit Ausnahme von Kern-Klassen wie z.B. ''Numbers'', ''Booleans'', usw. \cite{book:Dart:DPL_GiladBracha}.
+    Klassen können abstrakt implementiert werden \cite{book:Dart:StartGuideDart_SanjibSinha}, wodurch sich solche Klassen, welche nur abstrakte Methoden beinhalten, gut als Interfaces eignen \cite{book:Dart:DPL_GiladBracha}. Somit wird auch keine formelle Schreibweise eines Interfaces benötigt, da abstrakte Klassen völlig ausreichen \cite{book:Dart:DPL_GiladBracha}.
+
+    \noindent
+    Der größte Vorteil von Interfaces liegt in der mehrfach-Implementierung von Interfaces mittels einer Klasse. Klassen können somit mehrere Interfaces mittels des ''implements'' Ausdrucks implementieren \cite{book:Dart:StartGuideDart_SanjibSinha, book:Dart:DPL_GiladBracha}.
+    
+    \subsubsection{Konstruktoren}
+    \label{subsubsec:Dart:Klassen:Konstruktoren}
+    In Dart gibt es die üblichen ''default-Konstruktoren'', aber auch sogenannte ''named-Konstruktoren'' und ''factory-Konstruktoren'' \cite{book:Dart:StartGuideDart_SanjibSinha, book:Dart:DPL_GiladBracha}.
+    \begin{description}
+        \item[Named Konstruktor:]
+            Diese können als normale Konstruktoren aufgerufen werden, welche das zu erzeugende Objekt auf bestimmte deklarierte Weise initialisieren. Hierbei haben Nutzer den Vorteil ein Objekt mit verschiedenen Interfaces zu initialisieren. So können z.B. 2-Dimensionale Punkte mithilfe eines kartesischen Koordinatensystems, als auch mit einem polaren Koordinatensystem erzeugt werden \cite{book:Dart:DPL_GiladBracha}.
+        \item[Factory Konstruktor:] 
+            Factory Konstruktoren werden verwendet um sogenannte Fabriken zu erzeugen, welche die erzeugten Objekte cachen. Dart hat diesen Vorgang, im Vergleich zu anderen Sprachen, vereinfacht, sodass die übliche Eigenimplementation der Logik solcher Fabriken wegfällt \cite{book:Dart:DPL_GiladBracha}.
+    \end{description}
+
+    \subsubsection{Parameter}
+    \label{subsubsec:Dart:Klassen:Parameter}
+    In Dart gibt es drei verschiedene Arten von Parametern: ''Positional'', ''named'' und ''optional'' Parameter \cite{book:Dart:StartGuideDart_SanjibSinha}.
+    Parameter können im Generellen als ''optional'' markiert werden. Im Spezifischen lassen sich die Parameter einer Funktion in ''positional'' und ''named'' Parameter aufteilen. Hierbei müssen benötigte Parameter vor den optionalen Parametern, welche in einer Liste (eckige Klammern ''[]'') geschrieben sind, stehen. Optionalen Parametern kann man hierbei auch Standardwerte zuteilen. ''Named'' Parameter werden in geschweiften Klammern (''\{\}'') angegeben und falls sie das nicht werden, werden sie automatisch als ''Positional'' Parameter deklariert. Des Weiteren sind ''Named'' Parameter immer optional und müssen bei einem Funktionsaufruf nicht angegeben werden \cite{book:Dart:DPL_GiladBracha}.
+
+    \noindent
+    Benannte Parameter sind keine häufiges Vorkommnis, bergen aber den Vorteil dass sie leicht identifizierbar sind und die Anordnung dieser keine Auswirkung hat. Aufgrund dessen können ''Named'' Parameter nicht zusammen mit optionalen ''Positional'' Parametern verwendet werden, da hier das Zusammenspiel derer Logik nicht funktioniert \cite{book:Dart:DPL_GiladBracha}.
+
+    \subsubsection{Funktionen}
+    \label{subsubsec:Dart:Klassen:AnonymousFunc}
+    Funktionen können in Dart, trotz der Objektorientierung, als unabhängige Strukturen an verschiedenen Stellen stehen. Dadurch werden sie unterschieden in:
+        \begin{description}
+            \item[Top-level Functions:] Die Funktionen werden ganz oben in einer Library deklariert.
+            \item[Instance Methods:] Die Funktionen werden mit einer Instanz assoziiert.
+            \item[Class Methods:] Die Funktionen werden mit einer Klasse assoziiert.
+            \item[Local Functions:] Die Funktionen werden in einer Funktion implementiert.
+            \item[Function Literals:] Die Funktionen werden inline implementiert.
+        \end{description}
+    Neben diesen Funktionsarten bietet Dart auch noch Operatorüberladungen an \cite{book:Dart:DPL_GiladBracha}.
+    
+    \noindent
+    Auch kann man in Dart ''Anonymous Functions'' verwenden, da diese als Objekte angesehen werden. Hierzu zählen z.B. ''Lambdas'', aber auch sogenannte ''Lexical Closures'' \cite{book:Dart:StartGuideDart_SanjibSinha}.
+    Closures sind hierbei Funktionen, welche inline als Teil eines Ausdrucks deklariert werden. Neben dem Namen ''Lexical Closures'' werden sie auch ''Function Literals'' genannt. Sie besitzen die Eigenschaft nicht benannt zu sein, besitzen jedoch einen Funktionskörper und eine Parameterliste. Somit haben sie Ähnlichkeit zur Lambda-Expression \cite{book:Dart:DPL_GiladBracha}.
+
+    \subsubsection{Aufrufbare Klassen}
+    \label{subsubsec:Dart:Klassen:CallClass}
+    Sogenannte ''Callable Classes'' besitzen eine ''call()''-Methode, die implementiert werden muss und dessen Parameter selbst definiert werden kann.
+    Diese Klassen können dann inetern durch Dart aufgerufen werden, wodurch diese Methode aufgerufen wird.
+    Objekte solcher Klassen können also als Funktion in Dart verwendet werden \cite{book:Dart:StartGuideDart_SanjibSinha}.
+    Die Funktionsweise ähnelt der ''toString()''-Methode in Java, in derer Objekte ebenfalls aufgerufen werden können und dadurch deren ''toString()''-Methode. Hierbei könenn ''toString()''-Methoden jedoch keine Parameter beinhalten.
+
+\subsection{Typisierung}
+\label{subsec:Dart:Typisierung}
+In Dart wird dynamische/optionale Typisierung seit Beginn unterstützt um die Vorteile der bekannten Typisierung zu nutzen, jedoch die Nachteile zu verringern \cite{book:Dart:StartGuideDart_SanjibSinha, book:Dart:DPL_GiladBracha}.
+Optionale Typisierung bedeutet, dass Typen syntaktisch optional sind und keinen Effekt auf die Semantik zur Laufzeit besitzen.
+Generell schließen Typwarnungen in Dart niemals die Kompilierung und Ausführung des Programms aus.
+Somit erlaubt Dart auch das Vermischen von typisiertem und untypisiertem Code. 
+Dennoch wird auf vorgenommenes Typisiern geachtet und Warnungen geäußert, falls die Typisierung inkonsistent oder übersehen wird.
+Entwickler erhalten somit die Freiheit, diese zu beachten oder zu ignorieren.
+Das erkennt man an der Funktion, selektiv Warnungen zu deaktivieren oder dem ''checked mode'', ganz gut.
+Der ''checked Mode'' interpretiert Typen als ''Assertions'' zur Entwicklungszeit und verwendet zeitgleich eine dynamische Typenüberprüfung \cite{book:Dart:DPL_GiladBracha}.
+
+\subsection{Vererbung}
+\label{subsec:Dart:Vererbung}
+In Dart stammt jede Klasse von iener Superklasse ab, was bis zur Wurzel, der ''Object''-Klasse, fortgeführt wird. Diese Klasse ist die einzige Klasse ohne eine Superklasse \cite{book:Dart:DPL_GiladBracha}.
+Es werden zwei Arten von Vererbung unterstützt: Einzel-Vererbung (''single inheritance'') und Multilevel-Vererbung (''multilevel inheritance'') \cite{book:Dart:StartGuideDart_SanjibSinha}.
+Zwar wird keine Mehrfach-Vererbung (''multiple inheritance'') von Dart unterstützt, da dies zu Problemen geführt hat, simuliert diese jeodch mithilfe sogenannter ''Mixins'' für die Multilevel-/''Mixin-basierter''-Vererbung \cite{book:Dart:DPL_GiladBracha}.
+
+    \subsubsection{Mixins}
+    \label{subsubsec:Dart:Vererbung:Mixins}
+    Mixins sind der Körper einer Klasse, welcher selbst geschrieben und nicht von der Superklasse übernommen wurde \cite{book:Dart:DPL_GiladBracha}.
+    Sie erlauben das Wiederverwenden von Code einer beliebigen Klasse in einer multilevel Hierarchie/Vererbung \cite{book:Dart:StartGuideDart_SanjibSinha}.
+    So stellen sie sicher, dass der Code modular und unabhängig seiner Position in der Hierarchie wiederverwendet werden kann.
+    Durch ihre Verwendung werden zudem auch bekannte Probleme wie z.B. Wartungsprobleme, Typüberprüfungsprobleme usw. beseitigt \cite{book:Dart:DPL_GiladBracha}.
+    Sie sind eine Art limitierte multiple Vererbung. 
+    Dart kann somit, trotz nicht unterstüzten multipler Vererbung, mithilfe einer Kombination aus abstrakten Klassen, Interfaces, Mixins und Multilevel-Vererbung diese Limitation umgehen \cite{book:Dart:StartGuideDart_SanjibSinha}.
+
+\subsection{Asynchronität}
+\label{subsec:Dart:Concurrency}
+Darts Asynchronität basiert auf der ''Actor-style'' Parallelität. Diese besagt, dass ein Programm aus ein oder mehreren Actors besteht \cite{book:Dart:DPL_GiladBracha}.
+Dart an sich ist eine Single-Threaded Sprache und verwendet für die Asynchronität mehrere Features, wie z.B. ''Isolates'', ''Futures'', ''Asynchrone Funktionen'', ''Streams'' und ''Asynchrone Generatoren'' \cite{book:Dart:StartGuideDart_SanjibSinha, book:Dart:DPL_GiladBracha}.
+Isolates bilden hierbei die tieflegendste Schicht. Alles baut auf ihnen auf. Sie werden für das Ausführen paralleler Prozesse verwendet \cite{article:Dart:JavaAndDart_AfafMirghaniHassan} und in single- und multi-Isolates unterschieden \cite{book:Dart:DPL_GiladBracha}.
+Sie verwenden eine Cross-isolate Kommunikation, die einen asynchronen Nachrichtenaustausch verwendet \cite{book:Dart:DPL_GiladBracha}.
+Asnychrone Nachrichten können normalerweise nicht verfolgt werden. Man sendet sie und falls man Antwort erhalten würde, kann man diese nicht einer gesendeten Nachrichte zuordnen. Darum werden sogenannte ''Futures'' verwendet \cite{book:Dart:DPL_GiladBracha}.
+Futures sind z.B. in Funktionen diverser Bibliotheken vorhanden, die diese Asynchronität mittels Future- oder Stream-Objekten unterstützen \cite{article:Dart:JavaAndDart_AfafMirghaniHassan}.
+
+    \subsubsection{Isolates}
+    \label{subsubsec:Dart:Concurrency:Isolates}
+    Wie vorhin genannt verwendet Dart die ''Actor-style'' Parallelität. Hierfür werden Isolates verwendet. Ein Dart Programm besteht aus mehreren Actors, die als solche ''Isolates'' bezeichnet werden \cite{book:Dart:DPL_GiladBracha}.
+    
+    \noindent
+    Isolates besitzen ihren eigenen Speicher und einen eigenen ''Single Thread of Control''. Dabei sind die Speicher jeglicher Isolates sind voneinander logisch getrennt.
+    Der Code innerhalb der Isolates läuft sequentiell ab. Im Umkehrschluss entsteht die Parallelität somit durch das gleichzeitige Laufen mehrerer Isolates.
+    Die Vorteile, die Isolates bieten sind einerseits durch den getrennten Speicher, dass keine Locks für das Sichern von Werten zur Laufzeit verwendet werden müssen und dass es keine ''Concurrency races'' gibt, und andererseits sind Isolates nicht auf dem ''blocking-receive''-Pattern aufgebaut, wodurch keine ''Deadlocks'' entstehen können \cite{book:Dart:DPL_GiladBracha}.
+
+    \noindent
+    Isolates sollen trotz ihres getrennten Speichers miteinander kommunizieren können. Damit sie das erreichen, verwenden sie ein asynchrones ''Message Passing''.
+    Dafür besitzen mehrere Ports die in zwei Kategorien eingeteilt werden: ''Send''- und ''Receive''-Ports.
+    Diese bilden das Low-level Fundament von Dart.
+    Der Receive-Port ist dabei ein Stream von einkommenden Nachrichte, während der Send-Port es erlaubt Nachrichten an einen beliebigen Receive-Port zu schicken \cite{book:Dart:DPL_GiladBracha}.
+
+    \subsubsection{Futures}
+    \label{subsubsec:Dart:Concurrency:Futures}
+    Höherliegend sind die sogenannten ''Futures''. Diese sind Objekte, welche ein Ergebnis repräsentieren, die zu einem späteren Zeitpunkt berechnet werden.
+    Sie werden bei einem Aufruf sofort zurückgegeben, wie in einem synchronen Aufruf. Dadurch kann man mit ihnen sofort weiterarbeiten.
+    Die eigentliche Berechnung innerhalb dieser Future-Objekte wird dann zu einem späteren Zeitpunkt ausgeführt.
+    Hierdurch wird das Problem des asynchronen Nachrichtenaustausches gelöst, indem auf die Futures und deren Ergebnisse zurückgegriffen werden kann.
+    Es lassen sich auch fehlerhafte Berechnungen mithilfe von Futures anzeigen. Hierbei wird das Closure, behandelt in \ref{subsubsec:Dart:Klassen:AnonymousFunc}, ''onError'' verwendet, welches aufgerufen wird, sobald eine Exception geworfen wird \cite{book:Dart:DPL_GiladBracha}.
+    
+    \subsubsection{Asynchrone Funktionen}
+    \label{subsubsec:Dart:Concurrency:AsyncFunc}
+    Um mit Futures direkt zu arbeiten, muss man auch mit Isolates arbeiten, welche sehr low-level gehalten sind.
+    Damit dies alles indirekt geschieht werden von Dart sogenannte ''Asynchrone Funktionen'' bereitgestellt, welche den Ausdruck ''async'' verwenden.
+    Wird solch eine Funktion aufgerufen, so wird der Code nicht sofort ausgeführt, sonder nstattdessen ein ''Future''-Objekt zurückgegeben, auf das man sofort Zugang hat.
+
+    \noindent
+    Asynchrone Funktionen haben den Vorteil Boilerplate-Code und low-level Programmierung der Isolates zu vermeiden.
+    Gleichzeitig zu dem ''async''-Ausdruck, gibt es auch den ''await''-Ausdruck, welcher an der jeweiligen Stelle im Programm die laufende Funktion stoppt und auf die angegebene asynchrone Funktion wartet.
+    Damit es jedoch zu keinen Parallelitätsproblemen kommt, kann der ''await''-Ausdruck selbst nur in asynchronen Funktionen verwendet werden \cite{book:Dart:DPL_GiladBracha}.
+    
+    \subsubsection{Streams}
+    \label{subsubsec:Dart:Concurrency:Streams}
+    Neben ''Futures'' (\ref{subsubsec:Dart:Concurrency:Futures}) gibt es auch noch sogenannte ''Streams''.
+    Diese stellen eine Liste an Werten dar, welche eine undefinierte Länge besitzt.
+    Diesen Streams kann man ''subscriben''/''listen'', was bedeutet, dass ein oder mehrere Callback-Funktionen mit dem Stream registriert werden und dann aufgerufen werden, sobald neue Daten dem Stream hinzugefügt werden \cite{book:Dart:DPL_GiladBracha}.
+    
+    \subsubsection{Asynchrone Generatoren}
+    \label{subsubsec:Dart:Concurrency:AsyncGen}
+    Neben dem ''async''-Ausdruck gibt es auch den ''async*''-Ausdruck, der die Erstellung asynchroner Generatoren erlaubt.
+    Asynchrone Generatoren sind wiederum eine Form der asynchronen Funktionen, welche einen Stream beim jeweiligen Aufruf der Funktion zurückgibt.
+    Wenn man diesem Stream zuhört, so wird der jeweilige Funktionskörper des Generators ausgeführt, welcher wiederum Werte für den dazugehörigen Stream produziert.
+    So läuft dieser Funktionskörper dementsprechend auch in einer Endlos-Schleife durch.
+    Um das Intervall der Schleife zu ändern, können Verzögerungen mittels einer Future-Verzögerung oder etwaiger anderer Logik eingebaut werden. Abbrüche können über ein ''break'' eingebaut werden.
+    Sollten solche Verzögerungen oder Abbrüche nicht eingebaut werden, so wird die Funktion einmal in jedem Zyklus der Event-Schleife durchlaufen \cite{book:Dart:DPL_GiladBracha}.
+
+\subsection{Reflexion}
+\label{subsec:Dart:Reflexion}
+Reflexion in der Objektorientierung bedeutet das selbstständige untersuchen sowie modifizieren des Programms zur Laufzeit.
+Generell ist die Reflexion in zwei Arten unterteilt: Die ''Introspection'', was die Fähigkeit seine eigene Struktur zur Laufzeit zu bestimmen definiert und die ''Self-Modification'', was die Fähigkeit sich selbst während der Laufzeit zu ändern definiert \cite{book:Dart:DPL_GiladBracha}.
+
+\noindent
+Dart erlaubt hier nur die letztere Art der Reflexion durch die Nutzung sogenannter ''Mirrors''.
+Das sind Objekte, die ein anderes Objekt reflektieren. Sie sind eine bestimmte Form reflektiver APIs, welche Vorteile in Hinsicht auf Verteilung, Deployment und Sicherheit bieten.
+Auch helfen sie bei der Bereitstellung von reflektivem Code und Libraries. Das erreichen sie, indem die reflektive Funktionalität in separate Komponenten aufgeteilt wird.
+Dadurch ist es leichter zu erkennen ob Reflexion angewandt wird und somit ob der Reflexions-Code im bereitgestellten Code beibehalten werden muss.
+Da Mirrors ihre reflektive Funktionalität außerhalb der zu reflektierenden Objekte lokalisiert, versprechen sie dadurch eine bessere Unterstützung für das Deployment, die Verteilung und die Sicherheit im Gegensatz zu anderen älteren Reflexions-APIs \cite{book:Dart:DPL_GiladBracha}.
+
+\subsection{Libraries}
+\label{subsec:Dart:Libraries}
+Libraries werden in Dart verwendet um den Code modular zu halten und verbreitbare Code-Basen zu erstellen \cite{book:Dart:DPL_GiladBracha, book:Dart:StartGuideDart_SanjibSinha}.
+Sie definieren ihren eigenen Namespace, welcher die Namen der Entitäten beinhaltet, die wiederum in derjenigen Library deklariert werden.
+Auch vereinigen sie des Weiteren Klassen/Typen, sowie Funktionen und Variablen.
+Sie stellen eher eine Form der Privatsphäre anstelle der Sicherheit dar \cite{book:Dart:DPL_GiladBracha}.
+So werden Indikatoren, die mithilfe des Prefixes ''\_'' gekennzeichnet wurden, nur in der eigenen Library sichtbar.
+Das hat den Vorteil, dass solch gekennzeichnete Funktionen nicht von anderen Libraries verwendet werden können.
+Auch ''name conflicts'', mehrere Identifikatoren mit dem gleichen Namen, können dank Libraries, mit ihren eigenen Namespaces, vermieden werden \cite{book:Dart:StartGuideDart_SanjibSinha}.
+
+\noindent
+Libraries können importiert werden um deren Funktionalität zu nutzen \cite{book:Dart:DPL_GiladBracha}.
+Jedoch besitzt Dart selbst mächtige Core-Libraries, welche Deklarationen enthalten die für alle Dart-Programme zugänglich sind und implizit importiert werden.
+Solche Core-Libraries wären z.B. ''dart:Math'', ''dart:Core'' oder ''dart:IO'' \cite{book:Dart:StartGuideDart_SanjibSinha}.
+
+\noindent
+Libraries werden über das Keyword ''library'' definiert und über dem ''import'' Keyword importiert \cite{book:Dart:StartGuideDart_SanjibSinha, book:Dart:DPL_GiladBracha}.
+
+\subsection{Kompilierung}
+\label{subsec:Dart:Kompilierung}
+Der Dart Compiler kann geschriebenen Dart-Code auch zu JavaScript transkompilieren \cite{book:Dart:StartGuideDart_SanjibSinha, book:Dart:DPL_GiladBracha, article:Dart:JavaAndDart_AfafMirghaniHassan}.
+Dart erreicht seine hohe Portabilitätsrate dank seiner Fähigkeit zu ARM und x86 Code zu kompilieren, wodurch mobile Dart-Anwendungen auf iOS, Android und weiteren Plattformen laufen können.
+Somit kann Dart für z.B. Desktop, Mobile, Backend oder Web-Anwendungen verwendet werden \cite{book:Dart:StartGuideDart_SanjibSinha}.
+
+\noindent
+Die geschriebenen Anwendungen laufen meistens über, falls sie nicht zu JavaScript kompiliert wurden, über Dart-unterstützende Browser \cite{article:Dart:JavaAndDart_AfafMirghaniHassan}, können aber auch variieren und über z.B. die Dart Virtual Machine oder mobile Endgeräte laufen \cite{book:Dart:StartGuideDart_SanjibSinha}.
